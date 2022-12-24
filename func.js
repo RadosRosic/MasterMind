@@ -23,6 +23,7 @@ const playerGuess = [];
 const result = [];
 
 startGame();
+console.log(combination);
 
 function randomNumber() {
   return Math.trunc(Math.random() * 6) + 1;
@@ -146,6 +147,7 @@ function startGame() {
   const boxes = Array.from(document.getElementsByClassName("box"));
   boxes.forEach((e) => (e.innerHTML = ""));
   round = 1;
+  won = false;
   currentRoundText.textContent = `Guesses remaining: ${7 - round}`;
 
   first = randomNumber();
