@@ -1,0 +1,18 @@
+#main {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.section {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70vh;
+  width: 45%;
+  margin: 10px;
+  text-align: center;
+}

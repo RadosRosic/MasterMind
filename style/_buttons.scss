@@ -1,0 +1,47 @@
+#buttons {
+  background-color: #000;
+  height: 18vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  #guessAndDelBtns {
+    @include flex-c;
+    @include margin-0-a;
+    width: 50%;
+    #btnTry {
+      color: #000;
+      background-color: turquoise;
+      font-weight: bold;
+      margin: 5px;
+      padding: 15px;
+      border-radius: 20px;
+      font-size: 24px;
+      letter-spacing: 2px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    #btnDel {
+      @extend #btnTry;
+      background-color: red;
+    }
+  }
+
+  #btnsSelectSection {
+    @include flex-c;
+    @include margin-0-a;
+    width: 50%;
+
+    .btn {
+      background-color: #000;
+      border-radius: 20px;
+      width: 90px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

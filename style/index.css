@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background-color: #1b1b1b;
+  color: #f4f4f4;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+.m-y-5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.m-y-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.m-x-5 {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.m-x-10 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.p-all-5 {
+  padding: 5px;
+}
+.p-all-10 {
+  padding: 10px;
+}
+.p-y-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.p-y-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.p-x-5 {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.p-x-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.disp-blck {
+  display: block;
+}
+.disp-ib {
+  display: inline-block;
+}
+.disp-in {
+  display: inline;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-center-col {
+  flex-direction: column;
+}
+
+.txt-c {
+  text-align: center;
+}
+
+#playground {
+  margin: 0 auto;
+  width: 70%;
+  height: 100vh;
+}
+
+#header {
+  height: 7vh;
+  background-color: black;
+  text-align: center;
+}
+
+#main {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.section {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70vh;
+  width: 45%;
+  margin: 10px;
+  text-align: center;
+}
+
+#buttons {
+  background-color: #000;
+  height: 18vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#buttons #guessAndDelBtns {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+}
+#buttons #guessAndDelBtns #btnTry, #buttons #guessAndDelBtns #btnDel {
+  color: #000;
+  background-color: turquoise;
+  font-weight: bold;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+#buttons #guessAndDelBtns #btnTry:hover, #buttons #guessAndDelBtns #btnDel:hover {
+  cursor: pointer;
+}
+#buttons #guessAndDelBtns #btnDel {
+  background-color: red;
+}
+#buttons #btnsSelectSection {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+}
+#buttons #btnsSelectSection .btn {
+  background-color: #000;
+  border-radius: 20px;
+  width: 90px;
+}
+#buttons #btnsSelectSection .btn:hover {
+  cursor: pointer;
+}
+
+#footer {
+  color: black;
+  font-weight: bolder;
+  background-color: rgb(255, 255, 255);
+  height: 1.8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=index.css.map */
