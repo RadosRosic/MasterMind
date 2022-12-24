@@ -20,10 +20,11 @@
 .box {
   @include flex-c;
   height: 15%;
-  img {
-    width: 40px;
-  }
+
   @media screen and (max-width: 425px) {
     flex-wrap: wrap;
+    img {
+      width: 45px;
+    }
   }
 }
