@@ -119,9 +119,14 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 70vh;
-  width: 45%;
+  width: 40%;
   margin: 0 10px;
   text-align: center;
+}
+@media screen and (max-width: 425px) {
+  .section {
+    width: 35%;
+  }
 }
 
 .box {
@@ -134,7 +139,7 @@ body {
     flex-wrap: wrap;
   }
   .box img {
-    width: 45px;
+    width: 48px;
   }
 }
 
