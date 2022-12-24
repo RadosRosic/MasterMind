@@ -96,11 +96,12 @@ body {
 }
 
 #header {
-  height: 7vh;
+  height: 8vh;
   background-color: black;
   text-align: center;
 }
 #header #current-round {
+  font-size: 18px;
   padding: 5px;
 }
 
@@ -186,7 +187,7 @@ body {
   color: black;
   font-weight: bolder;
   background-color: rgb(255, 255, 255);
-  height: 2.9vh;
+  height: 1.9vh;
   display: flex;
   justify-content: center;
   align-items: center;
