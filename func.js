@@ -3,6 +3,10 @@ const btnDel = document.getElementById("btnDel");
 const btnTry = document.getElementById("btnTry");
 const currentRoundText = document.getElementById("current-round");
 const main = document.getElementById("main");
+const modal = document.getElementById("modal");
+const modalContent = document.getElementById("modalContent");
+const btnInfo = document.getElementById("btnInfo");
+const btnCloseModal = document.getElementById("bnt-close-modal");
 
 btns.forEach((e) => {
   e.addEventListener("click", select);
@@ -118,4 +122,25 @@ function del() {
       // activeBox.textContent = activeBox.textContent.slice(0, -1);
     }
   }
+}
+
+btnInfo.addEventListener("click", showModal);
+btnCloseModal.addEventListener("click", hideModal);
+modal.addEventListener("click", hideModal);
+modalContent.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    hideModal();
+  }
+});
+
+function showModal() {
+  modal.classList.remove("display-none");
+}
+
+function hideModal() {
+  modal.classList.add("display-none");
 }
