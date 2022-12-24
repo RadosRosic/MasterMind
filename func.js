@@ -40,6 +40,7 @@ function guess() {
       currentRoundText.textContent = "You won!";
       main.style.backgroundColor = "aqua";
       won = true;
+      // return;
     }
 
     const combinationCopy = [...combination]; // make a true copy of combination array, needed for splicing

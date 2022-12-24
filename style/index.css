@@ -100,6 +100,9 @@ body {
   background-color: black;
   text-align: center;
 }
+#header #current-round {
+  padding: 5px;
+}
 
 #main {
   background-color: whitesmoke;
