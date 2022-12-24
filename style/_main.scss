@@ -18,8 +18,12 @@
 }
 
 .box {
-  height: 10%;
+  @include flex-c;
+  height: 15%;
   img {
     width: 40px;
+  }
+  @media screen and (max-width: 425px) {
+    flex-wrap: wrap;
   }
 }

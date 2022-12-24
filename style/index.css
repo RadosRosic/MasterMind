@@ -124,10 +124,17 @@ body {
 }
 
 .box {
-  height: 10%;
+  display: flex;
+  justify-content: center;
+  height: 15%;
 }
 .box img {
   width: 40px;
+}
+@media screen and (max-width: 425px) {
+  .box {
+    flex-wrap: wrap;
+  }
 }
 
 #buttons {
