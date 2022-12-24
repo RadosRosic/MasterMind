@@ -231,12 +231,21 @@ body {
   background-color: #141414;
   border-radius: 10px;
   height: 20%;
-  width: 50%;
-  padding: 10px;
+  width: 30%;
+  padding: 20px;
   position: relative;
+  text-align: justify;
+}
+@media screen and (max-width: 1024px) {
+  #modal #modalContent {
+    text-align: unset;
+    width: 50%;
+    height: 25%;
+  }
 }
 @media screen and (max-width: 768px) {
   #modal #modalContent {
+    width: 50%;
     height: 30%;
   }
 }

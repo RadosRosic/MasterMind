@@ -77,7 +77,7 @@ createElement(
     nodeName: "p",
     id: "modalContent",
     innerHTML:
-      "You have six guesses to figure out the hidden combination.<br/><br/>X means that a symbol is not in the combination. Checkmark means that the symbol is in the combination and at a right place, and circular arrows mean that the symbol is in the combination but at the wrong place<br/><br/> Good luck!",
+      "You have six guesses to figure out the hidden combination.<br/><br/>X means that a symbol is not in the combination. Checkmark means that the symbol is in the combination and at a right place, and circular arrows mean that the symbol is in the combination but at the wrong place.<br/><br/> Good luck!",
   },
   modal
 );

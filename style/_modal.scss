@@ -12,10 +12,18 @@
     background-color: #141414;
     border-radius: 10px;
     height: 20%;
-    width: 50%;
-    padding: 10px;
+    width: 30%;
+    padding: 20px;
     position: relative;
+    text-align: justify;
+    @media screen and (max-width: 1024px) {
+      text-align: unset;
+      width: 50%;
+      height: 25%;
+    }
+
     @media screen and (max-width: 768px) {
+      width: 50%;
       height: 30%;
     }
     @media screen and (max-width: 425px) {
