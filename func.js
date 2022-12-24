@@ -12,7 +12,7 @@ btnTry.addEventListener("click", guess);
 
 let round = 1;
 let won = false;
-currentRoundText.textContent = round;
+currentRoundText.textContent = `Current round: ${round}`;
 
 const combination = [];
 let first, second, third, fourth;
@@ -37,8 +37,7 @@ function guess() {
 
   if (playerGuess.length === 4) {
     if (playerGuess.join("") === combination.join("")) {
-      console.log("WON");
-      currentRoundText.textContent = "WON";
+      currentRoundText.textContent = "You won!";
       main.style.backgroundColor = "aqua";
       won = true;
     }
@@ -83,9 +82,12 @@ function guess() {
     round++;
     if (round === 7 && won === false) {
       main.style.backgroundColor = "red";
+      currentRoundText.textContent = "You lost :(";
       return;
     }
-    currentRoundText.textContent = round;
+    if (won === false) {
+      currentRoundText.textContent = `Current round: ${round}`;
+    }
   }
 }
 

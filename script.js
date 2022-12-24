@@ -31,7 +31,7 @@ createElement(
 createElement(
   {
     nodeName: "h1",
-    textContent: "Guessing Game",
+    textContent: "Master Mind",
     id: "h1",
   },
   header
