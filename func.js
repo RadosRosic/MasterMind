@@ -12,7 +12,7 @@ btnTry.addEventListener("click", guess);
 
 let round = 1;
 let won = false;
-currentRoundText.textContent = `Current round: ${round}`;
+currentRoundText.textContent = `Guesses remaining: ${7 - round}`;
 
 const combination = [];
 let first, second, third, fourth;
@@ -91,7 +91,7 @@ function guess() {
       return;
     }
     if (won === false) {
-      currentRoundText.textContent = `Current round: ${round}`;
+      currentRoundText.textContent = `Guesses remaining: ${7 - round}`;
     }
   }
 }
