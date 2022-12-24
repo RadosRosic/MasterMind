@@ -32,7 +32,7 @@ function randomNumber() {
 console.log(combination);
 
 function guess() {
-  if (won === false && playerGuess.length === 4) {
+  if (!won && playerGuess.length === 4) {
     const activeBox = document.getElementById(`hintBox${round}`);
     console.log(combination, playerGuess);
 
@@ -77,7 +77,7 @@ function guess() {
       activeBox.append(img);
     });
 
-    if (won === true) {
+    if (won) {
       return;
     }
 
@@ -85,12 +85,12 @@ function guess() {
     playerGuess.length = 0;
     round++;
 
-    if (round === 7 && won === false) {
+    if (round === 7 && !won) {
       main.style.backgroundColor = "red";
       currentRoundText.textContent = "You lost :(";
       return;
     }
-    if (won === false) {
+    if (!won) {
       currentRoundText.textContent = `Guesses remaining: ${7 - round}`;
     }
   }
