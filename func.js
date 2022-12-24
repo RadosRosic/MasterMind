@@ -17,7 +17,6 @@ btnTry.addEventListener("click", guess);
 
 let round = 1;
 let won = false;
-currentRoundText.textContent = `Guesses remaining: ${7 - round}`;
 
 const combination = [];
 const playerGuess = [];
@@ -28,8 +27,6 @@ startGame();
 function randomNumber() {
   return Math.trunc(Math.random() * 6) + 1;
 }
-
-console.log(combination);
 
 function guess() {
   if (!won && playerGuess.length === 4) {
@@ -149,6 +146,7 @@ function startGame() {
   const boxes = Array.from(document.getElementsByClassName("box"));
   boxes.forEach((e) => (e.innerHTML = ""));
   round = 1;
+  currentRoundText.textContent = `Guesses remaining: ${7 - round}`;
 
   first = randomNumber();
   second = randomNumber();
