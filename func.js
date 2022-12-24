@@ -40,7 +40,7 @@ function guess() {
       console.log("WON");
       currentRoundText.textContent = "WON";
       main.style.backgroundColor = "aqua";
-      return;
+      won = true;
     }
 
     const combinationCopy = [...combination]; // make a true copy of combination array, needed for splicing
@@ -78,11 +78,11 @@ function guess() {
       activeBox.append(img);
     });
 
-    // activeBox.textContent = result.join(" ");
     result.length = 0;
     playerGuess.length = 0;
     round++;
-    if (round === 7) {
+    if (round === 7 && won === false) {
+      main.style.backgroundColor = "red";
       return;
     }
     currentRoundText.textContent = round;

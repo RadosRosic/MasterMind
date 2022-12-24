@@ -120,6 +120,10 @@ body {
   text-align: center;
 }
 
+.box {
+  height: 10%;
+}
+
 #buttons {
   background-color: #000;
   height: 18vh;
