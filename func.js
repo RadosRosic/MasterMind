@@ -7,6 +7,7 @@ const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modalContent");
 const btnInfo = document.getElementById("btnInfo");
 const btnCloseModal = document.getElementById("bnt-close-modal");
+const btnRestart = document.getElementById("btnRestart");
 
 btns.forEach((e) => {
   e.addEventListener("click", select);
@@ -19,10 +20,10 @@ let won = false;
 currentRoundText.textContent = `Guesses remaining: ${7 - round}`;
 
 const combination = [];
-startGame();
-
 const playerGuess = [];
 const result = [];
+
+startGame();
 
 function randomNumber() {
   return Math.trunc(Math.random() * 6) + 1;
@@ -130,6 +131,11 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+btnRestart.addEventListener("click", () => {
+  console.log(combination);
+  startGame();
+});
+
 function showModal() {
   modal.classList.remove("display-none");
 }
@@ -140,9 +146,17 @@ function hideModal() {
 
 function startGame() {
   let first, second, third, fourth;
+  const boxes = Array.from(document.getElementsByClassName("box"));
+  boxes.forEach((e) => (e.innerHTML = ""));
+  round = 1;
+
   first = randomNumber();
   second = randomNumber();
   third = randomNumber();
   fourth = randomNumber();
+  combination.length = 0;
+  playerGuess.length = 0;
+  result.length = 0;
   combination.push(first, second, third, fourth);
+  main.style.backgroundColor = "whitesmoke";
 }
