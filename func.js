@@ -32,15 +32,14 @@ function randomNumber() {
 console.log(combination);
 
 function guess() {
-  const activeBox = document.getElementById(`hintBox${round}`);
-  console.log(combination, playerGuess);
+  if (won === false && playerGuess.length === 4) {
+    const activeBox = document.getElementById(`hintBox${round}`);
+    console.log(combination, playerGuess);
 
-  if (playerGuess.length === 4) {
     if (playerGuess.join("") === combination.join("")) {
       currentRoundText.textContent = "You won!";
       main.style.backgroundColor = "aqua";
       won = true;
-      // return;
     }
 
     const combinationCopy = [...combination]; // make a true copy of combination array, needed for splicing
@@ -78,9 +77,14 @@ function guess() {
       activeBox.append(img);
     });
 
+    if (won === true) {
+      return;
+    }
+
     result.length = 0;
     playerGuess.length = 0;
     round++;
+
     if (round === 7 && won === false) {
       main.style.backgroundColor = "red";
       currentRoundText.textContent = "You lost :(";
@@ -106,10 +110,12 @@ function select(e) {
 }
 
 function del() {
-  const activeBox = document.getElementById(`guessBox${round}`);
-  if (playerGuess.length > 0) {
-    playerGuess.pop();
-    activeBox.removeChild(activeBox.lastChild);
-    // activeBox.textContent = activeBox.textContent.slice(0, -1);
+  if (won === false) {
+    const activeBox = document.getElementById(`guessBox${round}`);
+    if (playerGuess.length > 0) {
+      playerGuess.pop();
+      activeBox.removeChild(activeBox.lastChild);
+      // activeBox.textContent = activeBox.textContent.slice(0, -1);
+    }
   }
 }
