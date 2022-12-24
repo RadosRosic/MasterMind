@@ -39,7 +39,7 @@ createElement(
 
 createElement(
   {
-    nodeName: "h2",
+    nodeName: "p",
     id: "current-round",
   },
   header

@@ -71,8 +71,8 @@ function guess() {
       if (el === "X") {
         img.src = `./img/wrong.svg`;
       }
-      img.style.width = "65px";
-      img.style.margin = "0 12px";
+      // img.style.width = "65px";
+      // img.style.margin = "0 12px";
 
       activeBox.append(img);
     });
@@ -100,8 +100,8 @@ function select(e) {
   if (playerGuess.length < 4) {
     const activeBox = document.getElementById(`guessBox${round}`);
     const img = document.createElement("img");
-    img.style.width = "65px";
-    img.style.margin = "10px";
+    // img.style.width = "65px";
+    // img.style.margin = "0 10px";
 
     img.src = `./img/symbol${e.target.value}.svg`;
     activeBox.append(img);
