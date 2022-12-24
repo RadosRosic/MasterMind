@@ -6,7 +6,7 @@ const main = document.getElementById("main");
 const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modalContent");
 const btnInfo = document.getElementById("btnInfo");
-const btnCloseModal = document.getElementById("bnt-close-modal");
+const btnCloseModal = document.getElementById("btn-close-modal");
 const btnRestart = document.getElementById("btnRestart");
 
 btns.forEach((e) => {

@@ -85,7 +85,7 @@ createElement(
 createElement(
   {
     nodeName: "span",
-    id: "bnt-close-modal",
+    id: "btn-close-modal",
     textContent: "🞬",
   },
   modalContent

@@ -254,13 +254,14 @@ body {
     width: 90%;
   }
 }
-#modal #bnt-close-modal {
+#modal #btn-close-modal {
   position: absolute;
+  font-size: 20px;
   top: 5px;
   right: 5px;
   padding: 2px;
 }
-#modal #bnt-close-modal:hover {
+#modal #btn-close-modal:hover {
   cursor: pointer;
 }
 
