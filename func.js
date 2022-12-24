@@ -19,12 +19,7 @@ let won = false;
 currentRoundText.textContent = `Guesses remaining: ${7 - round}`;
 
 const combination = [];
-let first, second, third, fourth;
-first = randomNumber();
-second = randomNumber();
-third = randomNumber();
-fourth = randomNumber();
-combination.push(first, second, third, fourth);
+startGame();
 
 const playerGuess = [];
 const result = [];
@@ -46,11 +41,11 @@ function guess() {
       won = true;
     }
 
-    const combinationCopy = [...combination]; // make a true copy of combination array, needed for splicing
+    const combinationCopy = [...combination];
     for (let i = 0; i < playerGuess.length; i++) {
       if (playerGuess[i] === combinationCopy[i]) {
         result.push("!");
-        combinationCopy.splice(i, 1, 0); // replace el with 0
+        combinationCopy.splice(i, 1, 0);
       }
     }
 
@@ -75,8 +70,6 @@ function guess() {
       if (el === "X") {
         img.src = `./img/wrong.svg`;
       }
-      // img.style.width = "65px";
-      // img.style.margin = "0 12px";
 
       activeBox.append(img);
     });
@@ -104,8 +97,6 @@ function select(e) {
   if (playerGuess.length < 4) {
     const activeBox = document.getElementById(`guessBox${round}`);
     const img = document.createElement("img");
-    // img.style.width = "65px";
-    // img.style.margin = "0 10px";
 
     img.src = `./img/symbol${e.target.value}.svg`;
     activeBox.append(img);
@@ -119,14 +110,16 @@ function del() {
     if (playerGuess.length > 0) {
       playerGuess.pop();
       activeBox.removeChild(activeBox.lastChild);
-      // activeBox.textContent = activeBox.textContent.slice(0, -1);
     }
   }
 }
 
 btnInfo.addEventListener("click", showModal);
+
 btnCloseModal.addEventListener("click", hideModal);
+
 modal.addEventListener("click", hideModal);
+
 modalContent.addEventListener("click", (event) => {
   event.stopPropagation();
 });
@@ -143,4 +136,13 @@ function showModal() {
 
 function hideModal() {
   modal.classList.add("display-none");
+}
+
+function startGame() {
+  let first, second, third, fourth;
+  first = randomNumber();
+  second = randomNumber();
+  third = randomNumber();
+  fourth = randomNumber();
+  combination.push(first, second, third, fourth);
 }
