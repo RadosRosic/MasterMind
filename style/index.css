@@ -150,7 +150,10 @@ body {
 .box {
   display: flex;
   justify-content: center;
-  height: 15%;
+  height: 20%;
+}
+.box:not(.box:first-of-type) {
+  border-top: 1px solid whitesmoke;
 }
 @media screen and (max-width: 425px) {
   .box {
@@ -230,8 +233,8 @@ body {
 #modal #modalContent {
   background-color: #141414;
   border-radius: 10px;
-  height: 30%;
-  width: 33%;
+  height: 225px;
+  width: 475px;
   padding: 20px;
   position: relative;
   text-align: justify;
