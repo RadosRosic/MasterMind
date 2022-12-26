@@ -8,6 +8,8 @@ const modalContent = document.getElementById("modalContent");
 const btnInfo = document.getElementById("btnInfo");
 const btnCloseModal = document.getElementById("btn-close-modal");
 const btnRestart = document.getElementById("btnRestart");
+const btnsSelectSection = document.getElementById("btnsSelectSection");
+const solution = document.getElementById("solution");
 
 btns.forEach((e) => {
   e.addEventListener("click", select);
@@ -84,6 +86,13 @@ function guess() {
     if (round === 7 && !won) {
       main.style.backgroundColor = "red";
       currentRoundText.textContent = "You lost :(";
+      btnsSelectSection.classList.add("display-none");
+      solution.classList.remove("display-none");
+      combination.forEach((e) => {
+        const img = document.createElement("img");
+        img.src = `./img/symbol${e}.svg`;
+        solution.append(img);
+      });
       return;
     }
     if (!won) {
@@ -143,6 +152,10 @@ function hideModal() {
 }
 
 function startGame() {
+  btnsSelectSection.classList.remove("display-none");
+  solution.classList.add("display-none");
+  solution.innerHTML = "";
+
   let first, second, third, fourth;
   const boxes = Array.from(document.getElementsByClassName("box"));
   boxes.forEach((e) => (e.innerHTML = ""));

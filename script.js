@@ -174,6 +174,14 @@ createElement(
   buttons
 );
 
+createElement(
+  {
+    id: "solution",
+    classList: "display-none",
+  },
+  buttons
+);
+
 for (let i = 0; i < 6; i++) {
   createElement(
     {

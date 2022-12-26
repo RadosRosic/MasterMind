@@ -45,3 +45,10 @@
     }
   }
 }
+
+#solution {
+  @extend #btnsSelectSection;
+  img {
+    width: 90px;
+  }
+}

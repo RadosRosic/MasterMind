@@ -89,6 +89,10 @@ body {
   text-align: center;
 }
 
+.display-none {
+  display: none !important;
+}
+
 #playground {
   margin: 0 auto;
   width: 100%;
@@ -194,19 +198,23 @@ body {
 #buttons #guessAndDelBtns #btnDel {
   background-color: red;
 }
-#buttons #btnsSelectSection {
+#buttons #btnsSelectSection, #buttons #solution {
   display: flex;
   justify-content: center;
   margin: 0 auto;
   width: 50%;
 }
-#buttons #btnsSelectSection .btn {
+#buttons #btnsSelectSection .btn, #buttons #solution .btn {
   background-color: #000;
   border-radius: 20px;
   width: 90px;
 }
-#buttons #btnsSelectSection .btn:hover {
+#buttons #btnsSelectSection .btn:hover, #buttons #solution .btn:hover {
   cursor: pointer;
+}
+
+#solution img {
+  width: 90px;
 }
 
 #footer {
@@ -266,8 +274,4 @@ body {
 }
 #modal #btn-close-modal:hover {
   cursor: pointer;
-}
-
-.display-none {
-  display: none !important;
 }/*# sourceMappingURL=index.css.map */
